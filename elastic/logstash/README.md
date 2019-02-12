@@ -1,0 +1,1 @@
+# 为 logstash 增加 logstash-output-mongodb
