@@ -6,6 +6,6 @@ RUN \
 RUN \
     curl -sL https://deb.nodesource.com/setup_11.x | bash - && \
     apt-get update && \
-    apt-get install -yqq nodejs yarn openjdk-7-jre && \
+    apt-get install -yqq nodejs yarn openjdk-8-jre && \
     pip install -U pip && pip install pipenv && \
     rm -rf /var/lib/apt/lists/*
