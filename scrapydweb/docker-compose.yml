@@ -1,0 +1,28 @@
+
+version: "3.7"
+services:
+  scrapyd:
+    container_name: scrapyd
+    image: scrapyd-logparser:latest
+    ports:
+      - 6800:6800
+    networks: 
+      - scrapyd-cluster
+  
+  scrapydweb:
+    image: scrapydweb:latest
+    ports:
+      - 5000:5000
+    networks: 
+      - scrapyd-cluster
+    depends_on:
+      - scrapyd
+    command:
+      - -ss
+      - scrapyd:6800
+
+networks: 
+  scrapyd-cluster:
+
+volumes:
+  scrapyd-eggs:
