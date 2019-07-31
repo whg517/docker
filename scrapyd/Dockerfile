@@ -16,4 +16,4 @@ ADD ./supervisor_scrapyd.ini /etc/supervisord.d/scrapyd.ini
 
 EXPOSE 6800
 
-CMD [ "supervisord", "-c", "/etc/supervisord.conf" ]
+ENTRYPOINT [ "supervisord", "-c", "/etc/supervisord.conf" ]
