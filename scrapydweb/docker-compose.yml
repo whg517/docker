@@ -1,16 +1,15 @@
-
 version: "3.7"
 services:
   scrapyd:
     container_name: scrapyd
-    image: scrapyd-logparser:latest
+    image: huagang/scrapyd-logparser:latest
     ports:
       - 6800:6800
     networks: 
       - scrapyd-cluster
   
   scrapydweb:
-    image: scrapydweb:latest
+    image: huagang/scrapydweb:latest
     ports:
       - 5000:5000
     networks: 
